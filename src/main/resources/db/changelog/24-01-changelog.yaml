@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1732428847977-1
+      author: arrelin
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_mobile
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: manufacturer
+                  type: VARCHAR(255)
+              - column:
+                  name: ram
+                  type: VARCHAR(255)
+              - column:
+                  name: memory
+                  type: VARCHAR(255)
+              - column:
+                  name: battery
+                  type: VARCHAR(255)
+              - column:
+                  name: processor
+                  type: VARCHAR(255)
+              - column:
+                  name: price
+                  type: DECIMAL
+            tableName: mobile
+

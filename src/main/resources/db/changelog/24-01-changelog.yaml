@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 1732428847977-1
-      author: arrelin
+      id: 1732430000019-1
+      author: Arrelin
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
         - createTable:
@@ -32,5 +32,35 @@ databaseChangeLog:
               - column:
                   name: price
                   type: DECIMAL
+              - column:
+                  name: created_at
+                  type: DATE
             tableName: mobile
-
+  - changeSet:
+        id: 1732430000019-2
+        author: Arrelin
+        changes:
+          - insert:
+              columns:
+                - column:
+                    name: manufacturer
+                    value: 'Apple'
+                - column:
+                    name: ram
+                    value: '4GB'
+                - column:
+                    name: memory
+                    value: '128GB'
+                - column:
+                    name: battery
+                    value: '3000mAh'
+                - column:
+                    name: processor
+                    value: 'A13 Bionic'
+                - column:
+                    name: price
+                    value: 1000.00
+                - column:
+                    name: created_at
+                    value: 2020-01-01
+              tableName: mobile

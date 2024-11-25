@@ -1,10 +1,10 @@
-CRUD service
-basic post = 8888
+CRUD service <br>
+basic post = 8888 <br>
 
 Stack:
-App on Spring boot, PostgreSQL, Hibernate, REST Java 17 just for multi-line strings
-Tests on Testcontainers(Much better then blank mockito), RestAssured(AssertJ better version)
-Doc on basic java doc + Swagger Open API
+App on Spring boot, PostgreSQL, Hibernate, REST Java 17 just for multi-line strings <br>
+Tests on Testcontainers(Much better then blank mockito), RestAssured(AssertJ better version) <br>
+Doc on basic java doc + Swagger Open API <br>
 ## Documentation for ease of use at localhost:8888/swagger-ui.html
 for quick testing in POSTMAN or Curl <br>
 Get all stuff : GET http://localhost:8888/api/mobile or GET http://localhost:8888/api/mobile/ <br>

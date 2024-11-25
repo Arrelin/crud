@@ -2,7 +2,7 @@ CRUD service
 basic post = 8888
 
 Stack:
-App on Spring boot, PostgreSQL, Hibernate, REST
+App on Spring boot, PostgreSQL, Hibernate, REST Java 17 just for multi-line strings
 Tests on Testcontainers(Much better then blank mockito), RestAssured(AssertJ better version)
 Doc on basic java doc + Swagger Open API
 ## Documentation for ease of use at localhost:8888/swagger-ui.html

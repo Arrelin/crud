@@ -13,7 +13,7 @@ Update thing by id PUT  http://localhost:8888/api/mobile/{id} and field that u w
 Delete thing by id DELETE http://localhost:8888/api/mobile/{id} <br>
 
 Also includes liquibase with initdb insert to create 1 simple entity
-And docker-compose file so it will create postgresql instance on application execution automatically <br>
+And docker-compose file so it will create postgresql instance on application execution automatically(u need locally installed docker btw) <br>
 If any problems with db simply run <docker-compose up -d> in ur terminal
 
 

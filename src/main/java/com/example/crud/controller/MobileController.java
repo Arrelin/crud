@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -28,7 +29,8 @@ public class MobileController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<MobileDTO> createMobile(@RequestBody MobileDTO mobileDTO) {
-        return ResponseEntity.ok(mobileServiceImpl.createMobile(mobileDTO));
+        MobileDTO createdMobile = mobileServiceImpl.createMobile(mobileDTO);
+        return ResponseEntity.created(URI.create("/api/mobile/" + createdMobile.id())).body(createdMobile);
     }
 
     /**

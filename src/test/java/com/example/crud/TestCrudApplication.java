@@ -2,6 +2,7 @@ package com.example.crud;
 
 import org.springframework.boot.SpringApplication;
 
+
 public class TestCrudApplication {
 
 	public static void main(String[] args) {

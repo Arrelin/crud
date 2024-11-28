@@ -26,6 +26,7 @@ class CrudApplicationTests {
 	}
 
 
+
 	@Test
 	void shouldCreateMobile() {
 		String requestBody = """

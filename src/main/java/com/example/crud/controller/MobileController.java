@@ -6,7 +6,6 @@ import com.example.crud.service.MobileServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
@@ -29,7 +28,6 @@ public class MobileController {
      */
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    @Transactional
     public ResponseEntity<MobileDTO> createMobile(@RequestBody MobileDTO mobileDTO) {
         MobileDTO createdMobile = mobileServiceImpl.createMobile(mobileDTO);
         return ResponseEntity.created(URI.create("/api/mobile/" + createdMobile.id())).body(createdMobile);

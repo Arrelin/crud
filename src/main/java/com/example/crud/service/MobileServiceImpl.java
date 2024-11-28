@@ -27,6 +27,7 @@ public class MobileServiceImpl implements MobileService {
      * @return Mobile Entity
      */
     @Override
+    @Transactional
     public MobileDTO createMobile(MobileDTO mobileDTO) {
         Mobile mobile = Mobile.builder()
                 .manufacturer(mobileDTO.manufacturer())
@@ -43,6 +44,7 @@ public class MobileServiceImpl implements MobileService {
     }
 
     @Override
+    @Transactional
     public MobileDTO getMobileById(Long id) {
         Mobile mobile = mobileRepository.findById(id).orElseThrow(() -> new RuntimeException("Mobile not found"));
         return new MobileDTO(mobile.getId(), mobile.getManufacturer(), mobile.getRam(), mobile.getMemory(), mobile.getBattery(), mobile.getProcessor(), mobile.getPrice(), mobile.getCreatedAt());
@@ -73,6 +75,7 @@ public class MobileServiceImpl implements MobileService {
      * @return MobileDTO
      */
     @Override
+    @Transactional
     public MobileDTO updateMobile(Long id, MobileUpdateDTO mobileUpdateDTO) {
         Mobile mobile = mobileRepository.findById(id).orElseThrow(() -> new RuntimeException("Mobile not found"));
 
@@ -101,6 +104,7 @@ public class MobileServiceImpl implements MobileService {
     }
 
     @Override
+    @Transactional
     public void deleteMobile(Long id) {
         mobileRepository.deleteById(id);
     }
